@@ -1,0 +1,5 @@
+CREATE PROCEDURE Muestra_Actor
+AS
+BEGIN
+       SELECT * FROM ACTOR
+END

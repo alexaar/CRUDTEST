@@ -1,0 +1,18 @@
+IF OBJECT_ID('sp_insert_Actor') IS NOT NULL
+BEGIN 
+DROP PROC sp_insert_Actor
+END
+GO
+CREATE PROCEDURE sp_insert_Actor
+	   @NOMBRES varchar(25),
+	   @APELLIDOS	varchar(25)
+AS
+BEGIN
+INSERT INTO ACTOR(
+	   NOMBRES,
+	   APELLIDOS)
+    VALUES (
+	   @NOMBRES,
+	   @APELLIDOS)
+END
+
