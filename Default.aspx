@@ -10,6 +10,11 @@
                       <asp:BoundField DataField="NOMBRES" HeaderText="NOMBRES" />
                     <asp:BoundField DataField="APELLIDOS" HeaderText="APELLIDOS" />
                     <asp:CommandField ShowDeleteButton="true" EditText="Eliminar Actor" />
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <asp:LinkButton ID="lblActualizar" runat="server" Text="Actualizar" OnClick="lblActualizar_Click"></asp:LinkButton>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </Columns>
             </asp:GridView>
             <br />
@@ -17,16 +22,17 @@
         </asp:Panel>
         <asp:Panel ID="pnlAltasActor" runat="server" Visible="false">
             <div>
-                <asp:Label ID="lblNombre" Text="Nombre" runat="server"></asp:Label>             
+                <asp:Label ID="lblNombre"        Text="Nombre" runat="server"></asp:Label>             
                 <asp:TextBox ID="txtNombre" runat="server"></asp:TextBox>
             </div>
             <div>
-                <asp:Label ID="lblApellidos" Text="Apellidos" runat="server"></asp:Label>             
+                <asp:Label ID="lblApellidos"     Text="Apellidos" runat="server"></asp:Label>             
                 <asp:TextBox ID="txtApellidos" runat="server"></asp:TextBox>
             </div>
             <br />
- 
+            <asp:Label ID="lblID_Actor" runat="server" Visible="false" />
             <asp:Button ID="btnGuardar" runat="server" Text="Guardar Actor" OnClick="btnGuardar_Click" />
+            <asp:Button ID="btnActualizar" runat="server" Text="Actualizar Actor" OnClick="btnActualizar_Click" />
         </asp:Panel>
     </div>
 </asp:Content>
